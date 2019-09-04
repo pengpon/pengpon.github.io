@@ -21,7 +21,7 @@ Canvas-->HTML5的新tag之一，類似小畫家，提供畫布
 
 canvas只有width和height兩個屬性，預設寬為300 px、高150 px。
 
-<canvas></canvas>> 需要close tag
+<canvas></canvas> 需要close tag
 
 產生一個自定大小的畫布、畫紙，在上面可以有多個Rendering context(繪圖環境or渲染環境)。
 
