@@ -3,15 +3,10 @@
 layout: post
 title:  "CSS Sprites 筆記"
 date:   2019-07-24 21:33:00 +0800
+excerpt: "為了降低Request次數，減輕Server的負擔，sprite常常出現 在使用多個icon或是有小型動畫的網站中"
 ---
 
 
-
-# 前言
-
-> 為了降低Request次數，減輕Server的負擔
->
-> 常常出現 在使用多個icon或是有小型動畫的網站中
 
 # 原理
 

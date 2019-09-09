@@ -3,11 +3,10 @@
 layout: post
 title:  "Server to Client"
 date:   2019-08-29 13:02:00 +0800
+excerpt: "輸入網址後 發生了那些事?????"
 ---
 
 
-
-# 前言
 
 關於瀏覽器怎麼運作??
 

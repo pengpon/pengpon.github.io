@@ -2,13 +2,10 @@
 layout: post
 title:  "Line Bot 筆記"
 date:   2019-07-18 23:59:59 +0800
+excerpt: "紀錄7/18 雞湯老師 分享的Line Bot"
 ---
 
 
-
-# 前言
-
-> 紀錄7/18 雞湯老師 分享的Line Bot
 
 # 原理
 

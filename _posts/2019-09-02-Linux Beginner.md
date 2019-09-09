@@ -3,13 +3,10 @@
 layout: post
 title:  "Linux Beginner"
 date:   2019-09-02 20:59:00 +0800
+excerpt: "複習無數個上周前的帆哥Linux起手式&搭配鳥哥網路資源"
 ---
 
 
-
-# 前言
-
-複習無數個上周前的帆哥Linux起手式&搭配鳥哥網路資源
 
 - What is Linux?
 - Unix歷史

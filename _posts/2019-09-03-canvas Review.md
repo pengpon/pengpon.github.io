@@ -3,11 +3,10 @@
 layout: post
 title:  "Canvas Review"
 date:   2019-09-03 10:05:00 +0800
+excerpt: "canvas 複習"
 ---
 
 
-
-# 前言
 
 Canvas-->HTML5的新tag之一，類似小畫家，提供畫布
 
