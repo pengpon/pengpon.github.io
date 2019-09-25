@@ -1,11 +1,16 @@
 ---
 layout: post
 title:  "CSS Display Basic property - Inline and Block "
-date:   2019-07-06 23:30:00 +0800
-excerpt: "一日不讀書 便覺得面目...一步一步把兩年前東西 複習起來"
+date:   2019-07-06 23:30:00
+author: Pon
+categories: web
+tags: css layout
 ---
 
 
+> 一日不讀書 便覺得面目...
+>
+> 一步一步把兩年前東西 複習起來
 
 
 

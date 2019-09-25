@@ -1,12 +1,25 @@
 ---
 layout: page
-title: About this site
-description: 
-sitemap:
-    priority: 0.7
-    lastmod: 2019-09-09
-    changefreq: weekly
+title: About
+permalink: /about/
+main_nav: true
 ---
-## About this site
+
+![profile]({{ site.baseurl }}/assets/profile.jpg "Profile Picture"){:.profile}
+
+2017年底初次踏入資訊產業當個菜鳥工程師，很幸運在團隊裡有前輩-[帆哥](https://josephjsf2.github.io/)時不時扮演大家的mentor，在對工作、技術能力灰心時(或是犯蠢時.....)，總是用積極的態度鼓勵菜鳥我，也常常分享好書、有趣技術還有種種過來人的經驗談。
+
+2018年底組成了讀書會，由**外表看似小孩,技術卻過於常人**的帆哥、**強大技術顧問身兼心靈雞湯老師**的[昱廷](https://yuting3656.github.io/yutingblog/)以及菜菜的我組成。雖然名為讀書會但性質有點像每周一次的分享會，內容很廣泛，包含近期突破卡關的分享、Ted talk影片的心得分享、分享codility解法、ngrx入門分享(?)、資料結構介紹...blablabla
+
+拖延症的我，也終於終於在2019年中開始試著紀錄一些筆記，也是要再次感謝帆哥介紹github pages和jekyll，自己設定筆記的內容很廣泛，看到什麼就記什麼，子彈筆記中的一句話他說**我們每天會有多達五至七萬則想法。如果每個想法代表一個單字，這代表我們的心智每一天會產生相當於一本書的內容**。
+
+沒錯，金魚腦的我，在III學的一切....越來越模糊，寫code的感覺也越來越陌生(哪裡分號 哪裡= )，只記得17381738 local server這些...
+
+也因為是筆記，所以會參考網路上的文章、圖片、影片，擷取出覺得是重點的重點，技術層面不高，但如果有誤解寫錯的地方，也希望巨人們不吝指正!!!!  P.S. DISQUS留言可以用喔~
+
+最後找了好久的Jekyll theme，暫時塵埃落定，感謝[Ben centra](https://github.com/bencentra/centrarium)的主題!!
+
+
+
 
 

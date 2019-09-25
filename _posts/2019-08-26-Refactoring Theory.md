@@ -1,12 +1,15 @@
 ---
-
 layout: post
-title:  "重構的原理 Chapter2 筆記"
-date:   2019-08-26 18:22:00 +0800
-excerpt: "筆記一下重點中的重點"
+title:  "Refactoring Theory 筆記"
+date:   2019-08-26 18:22:00
+author: Pon
+categories: studygroup
+tags: refactoring
 ---
 
 
+
+# 前言
 
 > 怠惰已久的筆記 
 >

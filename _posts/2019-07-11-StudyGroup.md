@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "小七生日快樂!! 7/11 讀書會學習地圖"
-date:   2019-07-11 23:59:00 +0800
-excerpt: "讀書會未來形式"
+date:   2019-07-11 23:59:00
+author: Pon
+categories: studygroup
+tags: xmind 
 ---
 
 > 紀錄7/11讀書會 決定未來進行方式的一晚

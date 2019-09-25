@@ -1,13 +1,17 @@
 ---
-
 layout: post
 title:  "PIXI.js 超入門"
-
-excerpt: "去年lag的被**奔跑吧台北**小遊戲燒到(pixel風格，爆炸懷念)，2018年底玩樂性質的去高雄MOPCON也有幸聽到一場PIXI.js的議程。又是一篇想還債的筆記!"
+date:   2019-09-05 15:06:00
+author: Pon
+categories: web
+tags: game pixi
 ---
 
 
 
+# 前言
+
+去年lag的被**奔跑吧台北**小遊戲燒到(pixel風格，爆炸懷念)，2018年底玩樂性質的去高雄MOPCON也有幸聽到一場PIXI.js的議程。又是一篇想還債的筆記!
 
 附上:
 

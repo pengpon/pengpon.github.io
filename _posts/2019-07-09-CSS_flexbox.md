@@ -1,12 +1,19 @@
 ---
 layout: post
 title:  "CSS Flexbox　硬翻譯筆記 "
-date:   2019-07-09 23:31:00 +0800
-excerpt: "在這個裝置尺寸百百種的時代下，產生了Flexible Box的排版模式。
-必須稍稍微的認識一下!!!"
+date:   2019-07-09 23:31:00
+author: Pon
+categories: web
+tags: css layout
 ---
 
+> 在這個裝置尺寸百百種的時代下，產生了Flexible Box的排版模式。
+>
+> 必須稍稍微的認識一下!!!
 
+
+
+# 前言
 
 > 一張圖勝過千言萬語!!
 >

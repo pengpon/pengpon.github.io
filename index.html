@@ -1,125 +1,88 @@
 ---
-layout: null
-title: Yu-Shan Blog
-description: 想到什麼 記下什麼
-sitemap:
-priority: 1.0
-lastmod: 2019-09-06
-changefreq: weekly
+layout: default
+pagination: 
+  enabled: true
 ---
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-  Jekyll integration by somiibo.com
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<div class="home">
 
-<head>
-	{% include head.html %}
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
+  <div class="scrim {% if site.cover %}has-cover{% endif %}">
+    <header class="site-header">
+      <h1 class="title">{{ site.title }}</h1>
+      {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
+    </header>
+  </div>
+</div>
 
+<div class="wrapper">
+<ul class="post-list">
+  {% for post in paginator.posts %}
+  <li>
+    <h2>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+      <div class="post-categories">
+      {% if post.categories.size > 0 %}in {% for cat in post.categories %}
+        {% if site.jekyll-archives %}
+        <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+        {% else %}
+        <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+        {% endif %}
+      {% endfor %}{% endif %}
+      </div>
+    </section>
+  </li>
+  {% if forloop.last == false %}
+  <hr>
+  {% endif %}
+  {% endfor %}
+</ul>
 
-</head>
+<nav class="pagination" role="navigation">
+	<p>
+    {% if paginator.previous_page %}
+			{% if paginator.page == 2 %}
+			<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+			{% else %}
+			<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.next_page_path }}">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			{% endif %}
+		{% else %}
+		<span class="fa-stack fa-lg">
+      <i class="fa fa-square fa-stack-2x"></i>
+      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+    </span>
+		{% endif %}
+		<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+		{% if paginator.next_page %}
+		<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.next_page_path }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+		{% else %}
+		<span class="fa-stack fa-lg">
+      <i class="fa fa-square fa-stack-2x"></i>
+      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+    </span>
+		{% endif %}
+	</p>
+</nav>
 
-<body class="is-loading">
-
-	<!-- Wrapper -->
-	<div id="wrapper" class="fade-in">
-
-		<!-- Intro -->
-		<div id="intro">
-			<h1>{{site.title}}</h1>
-			<h2>我們的心智每一天會產生相當於一本書的內容</h2>
-			<p>腦袋轉啊轉-當才華還不夠撐起野心時，就靜下心來好好學習<br /></p>
-			<ul class="actions">
-				<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-			</ul>
-		</div>
-
-		<!-- Header -->
-		<header id="header">
-			<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-		</header>
-
-		<!-- Nav -->
-		<nav id="nav">
-
-			{% include nav.html %}
-
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-			<!-- Featured Post -->
-			<article class="post featured">
-				<header class="major">
-					<h2><a href="#">隨手記錄 <br>前端大小事、生活大小事</a></h2>
-					<p></p>
-				</header>
-				<!-- <a href="#" class="image main"><img src="{{ "/images/pic01.jpg" | absolute_url }}" alt="" /></a>
-				<p>Regardless of your website's function, the homepage is what brings the user in.
-					If it's anything short of intriguing, captivating, or just plain cool, you're out of luck and you might deter
-					some visitors.</p>
-				<p>Your homepage must clearly describe what your site is about.
-					Having engaging content will in this manner enable you to offer and it will make your customers more inclined
-					to purchase from you. Content is a way to position your organization in the correct place for your clients to
-					discover you.
-				</p>
-				<p>
-					In this manner, content in itself is a standout amongst the best promoting apparatuses in your whole
-					advertising toolbox! Rather than making your content around your promoting technique, it's limitlessly more
-					productive to fabricate your showcasing around your content.
-				</p> -->
-
-			</article>
-
-			<!-- Posts -->
-			<section class="posts">
-				{% for post in site.posts limit:4 %}
-				{% assign mod4 = forloop.index | modulo: 4 %}
-				<article>
-					<header>
-						<span class="date">{{ post.date | date_to_string }}</span>
-						<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-					</header>
-					<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}"
-							alt="" /></a>
-					<p>{{ post.excerpt }}</p>
-					<ul class="actions">
-						<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
-					</ul>
-				</article>
-				{% if mod3 == 0 %}
-				<article>
-					<!-- <header>
-  										<h2><a href="#">Sponsored</a></h2>
-  									</header> -->
-
-				</article>
-				{% endif %}
-				{% endfor %}
-
-			</section>
-
-			<!-- Footer -->
-			<footer>
-				<ul class="actions">
-					<li><a href="{{ "/blog/" | absolute_url }}" class="button">Blog Go!</a></li>
-				</ul>
-			</footer>
-
-		</div>
-
-		<!-- Footer -->
-		{% include foot.html %}
-
-	</div>
-
-	<!-- Scripts -->
-	{% include scripts-main.html %}
-	{% include tracking.html %}
-
-</body>
-
-</html>
+</div>
+</div>
