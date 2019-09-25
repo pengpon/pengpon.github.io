@@ -6,7 +6,6 @@ author: Pon
 categories: studygroup
 tags: xmind 
 ---
-
 > 紀錄7/11讀書會 決定未來進行方式的一晚
 >
 > 大家腦中都繃出很多想學、有興趣的東西

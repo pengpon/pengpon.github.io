@@ -6,9 +6,6 @@ author: Pon
 categories: studygroup
 tags: refactoring 
 ---
-
-
-
 > If it stinks, change it!
 
 臭掉時，就換掉它吧!

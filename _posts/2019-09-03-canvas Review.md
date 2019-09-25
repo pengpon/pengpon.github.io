@@ -6,9 +6,6 @@ author: Pon
 categories: web
 tags: canvas design
 ---
-
-
-
 # 前言
 
 Canvas-->HTML5的新tag之一，類似小畫家，提供畫布

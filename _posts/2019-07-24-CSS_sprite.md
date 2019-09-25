@@ -6,9 +6,6 @@ author: Pon
 categories: web
 tags: css sprites
 ---
-
-
-
 # 前言
 
 > 為了降低Request次數，減輕Server的負擔

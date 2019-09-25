@@ -6,9 +6,6 @@ author: Pon
 categories: studygroup
 tags: OS Linux
 ---
-
-
-
 # 前言
 
 複習無數個上周前的帆哥Linux起手式&搭配鳥哥網路資源

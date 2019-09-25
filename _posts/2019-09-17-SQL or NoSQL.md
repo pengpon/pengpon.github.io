@@ -6,8 +6,6 @@ author: Pon
 categories: database
 tags: database sql 
 ---
-
-
 到底怎麼選擇SQL或是NOSQL?
 
 原本沒有想太多只是想試玩firebase，結果發散到SQL和NoSQL。懵懵懂懂只知道兩者架構不一樣，(應該是?)一個有table、有column去儲存資料；一個則是JSON Key-value方式存取資料．透過這次筆記，能稍微知道一些細節或者什麼資料適合SQL or NoSQL?? 

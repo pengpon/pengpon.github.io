@@ -6,7 +6,6 @@ author: Pon
 categories: web
 tags: blog jekyll 
 ---
-
 創建網站前，除了需要一個網域外，還要虛擬主機(Web hosting，來存放檔案和資料夾)
 
 最基本的流程就包含：

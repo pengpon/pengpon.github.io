@@ -6,9 +6,6 @@ author: Pon
 categories: studygroup
 tags: refactoring
 ---
-
-
-
 # 前言
 
 > 怠惰已久的筆記 

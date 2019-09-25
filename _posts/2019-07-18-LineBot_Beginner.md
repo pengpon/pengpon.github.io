@@ -6,9 +6,6 @@ author: Pon
 categories: studygroup
 tags: LineBot
 ---
-
-
-
 # 前言
 
 > 紀錄7/18 雞湯老師 分享的Line Bot

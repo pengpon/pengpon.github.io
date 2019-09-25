@@ -6,9 +6,6 @@ author: Pon
 categories: web
 tags: browser
 ---
-
-
-
 # 前言
 
 關於瀏覽器怎麼運作??
