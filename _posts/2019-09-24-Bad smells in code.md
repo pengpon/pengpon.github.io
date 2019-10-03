@@ -355,6 +355,8 @@ let withinPlan = plan.withinRange(daysTempRange);
 
 https://refactoring.guru/refactoring/smells
 
+https://dmitripavlutin.com/coding-like-shakespeare-practical-function-naming-conventions/
+
 
 
 
