@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bad smells in code 筆記"
+title:  "Refactoring Ch.3-Bad smells in code"
 date:   2019-09-24 09:24:00 +0800
 author: Pon
 categories: studygroup

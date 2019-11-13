@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Building Test 筆記"
-date:   2019-10-22 18:46:00 +0800
+title:  "Refactoring Ch.4-Building Test"
+date:   2019-11-13 17:09:00 +0800
 author: Pon
 categories: studygroup
-tags: refactoring 
+tags: refactoring testing
 ---
 
 > 關於重構ch.4-建構測試程式

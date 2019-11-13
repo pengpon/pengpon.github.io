@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Refactoring Theory 筆記"
+title:  "Refactoring Ch.2-Refactoring Theory"
 date:   2019-08-26 18:22:00
 author: Pon
 categories: studygroup

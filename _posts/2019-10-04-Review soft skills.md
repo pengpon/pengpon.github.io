@@ -3,7 +3,7 @@ layout: post
 title:  "心靈雞湯 & 人生哲學 複習一下 Part 1"
 date:   2019-10-04 05:17:00 +0800
 author: Pon
-categories: class 
+categories: studygroup
 tags: softskills life
 ---
 > 讀書會快一年了，複習一下

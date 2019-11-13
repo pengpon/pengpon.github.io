@@ -104,149 +104,189 @@
     <div class="page-content">
         <div class="home">
 
-<div class="site-header-container has-cover" style="background-image: url(/assets/header_image.jpg);">
-  <div class="scrim has-cover">
-    <header class="site-header">
-      <h1 class="title">Yu-Shan | 菜鳥筆記</h1>
-      <p class="subtitle">當才華撐不起野心時，就該好好靜下心來學習</p>
-    </header>
-  </div>
-</div>
-
-<div class="wrapper">
-<ul class="post-list">
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/web/2019/11/04/WebSocket-excercise-Interview-Task.html">Websocket 小實作</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>起源於interview某家公司出的小作業 實作一個桌機與手機互動的小demo 紀錄其中的過程 起源 公司提供了一個參考影片，影片中的桌機畫面是一個web動畫，以及一個行走中的小角色 影片中的人拿著手機，以橫向翻轉手機時，桌機動畫裡的場景會改變，ex:白天-黑夜 可能也會改變動畫故事的發展 發想 首先survey了手機內含的感測器，主要常見的像是 近距感測器(Proximity Sensor) 透過接受到的紅外線強度判斷距離，可以偵測通話時是否貼在耳朵，決定是否關閉螢幕。 環境光(光度)感測器(Ambient Light Sensor) 感測環境光線的強度，用來調節手機螢幕亮度 白天提高螢幕亮度；夜晚降低螢幕亮度 提高使用者舒適程度也能延長電池壽命 加速度計(Accelerometer) 切換橫直向螢幕或是計步 磁感測器(Magnetism) 測量電阻來判斷磁場強度，應用在指南針或是地圖導航 陀螺儀感測器(gyroscope) 常看到的應用像是:用手機模擬方向盤的賽車遊戲、槍擊遊戲，GPS導航，拍照時會偵測裝置晃動程度以方便處理出穩定的照片 GPS 裝置裡的GPS模組透過衛星的瞬間位置計算距離，用在定位、測速、測量距離。 要讓使用者最能上手操作的變因，首選應該就是裝置的方向 互動內容 既然決定讓使用者透過裝置的方向或是加速度來改變某些事件 下一步就是關於到底要做什麼內容 過去有關的經驗不外乎就是利用裝置當作方向盤的賽車遊戲 模擬出一種身歷其境的體驗 開始想…現實生活中有哪些事情 或有需要搖晃或是控制方向的事物/物體 配合生活經驗，剛好這陣子迷上幸運餅乾籤詩，但幸運餅乾沒有可以模擬的動作 於是決定改類似概念-採用廟裡搖籤抽運勢和籤詩作為方向 素材 決定內容後，上網開始找圖庫找素材找靈感 Flaticon-PPT需要小icon吸睛時，很推! 或是Freepik 剛開始卡在英文關鍵字不容易下，而且目標物又是比較偏東方的東西 fortune paper , temple, lottery 搜尋出來都不是想要的 於是利用google的圖片搜尋 看到一張日本籤筒的小插圖, 根據上面寫的平假名(Omikuji)，再用google搜尋...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">November 4, 2019</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/web">Web</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/studygroup/2019/10/31/Learning-how-to-learn-beginner.html">Learning how to learn & Conf統整</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>10/31 讀書會筆記 來自上周10/24 昱廷分享 coursera的課程 一起看完week1 video的部分 以及分享大大小小的conf Learning how to learn-week1 ## Thinking mode-思考模式 Focused mode Diffuse mode 課程中，使用彈珠台的概念來比喻我們的大腦以及解釋思考模式 專注或是學習某件事時(或是特定領域時)，是使用自己熟悉的思維模式，所謂的focused mode。 但如果是一件過去沒解決的的問題，還是停留在這個模式時，很容易被框架所侷限住。 所以就像左圖，彈珠的路徑一直停留在上方的區塊，很難有新的想法蹦出來，這時候就需要切換到diffuse mode，就像是讓大腦放鬆，退一步看看全貌。 Dali &amp; Edison 舉了偉人是如何切換這兩種模式的例子，達利會坐在椅子上放空，同時手裡拿著鑰匙，晃啊晃的當快睡著的時候，鑰匙掉在地上的聲音會讓自己醒來，放鬆期間的得到的新想法就這樣帶回他自己的focused mode中繼續創作。愛迪生也是一樣坐在椅子上，手裡拿著ball bearings，剛睡著被吵醒的那瞬間，就是切換mode。 當學習新事物或是比較困難的問題時，大腦要可以有切換兩種模式的能力，能輔助自己提高學習的效率。 What is Learning 記憶儲存在億萬個神經突觸裡，神經元之間的連結為突觸，產生新的同時舊的也會被淘汰。 藉由這些神經突觸，訊息可以在神經元之間相通，腦透過中樞神經反應感覺或知覺，進而產生我們的思維或是運動指令。嬰兒1~10歲腦神經突觸會快速成長，10歲之後突觸開始緩慢減少…. 但多多刺激還是會生成突觸的，在睡眠期間會形成突觸，和其他神經元連結，甚至一個神經元和多個神經元串連。 代表睡眠期間腦神經會產生一些連結，鞏固你的記憶，但如果不常訓練，很容易退化消失。 所以什麼是好的學習: 更多的學習 更多的練習 良好的睡眠 Conf整理 多吸取一些新知或是關鍵字的好時機 講者將自己的經驗濃縮成30~60分鐘的精華 能有這樣子的資源　真的要好好珍惜~ JSDC JSDC 2019...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 31, 2019</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/studygroup">Studygroup</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/studygroup/2019/10/22/Building-Test.html">Building Test 筆記</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>關於重構ch.4-建構測試程式 為了正確的進行重構，需要一套可靠的測試工具來發現難以避免的錯誤 這篇筆記一併介紹測試種類，以及利用Jest&amp;Peppeteer實作 Building Test-建構測試程式 章節分成七個部分: The value of Self-Testing Code-自檢程式的價值 Sample Code to Test-測試的範例 A First Test-初次測試 Add Another Test-加入其他測試 Modifying The Fixture-修改fixture Probing the Boundaries-探測邊界 Much More Than This-點到為止?(淺嘗輒止) The Value of Self-Testing Code 修復bug很快，但找出bug的原因像惡夢 / 修好一個bug還有千千萬萬個bug，而且不知道什麼時候發作 實現頻繁的測試，讓每一次的測試只相距幾分鐘，可以知道bug來自不久前寫的code，也因為記憶猶新，容易找出bug。 開始coding時就是寫測試的好時機! 先寫測試程式才實作功能的程式開發技巧稱為測試驅動開發(Test-Driven Development)，透過Test/Coding/Refactor (Red–Green–Refactor)的循環。 Red-Green-Refactor One of the most widely...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 22, 2019</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/studygroup">Studygroup</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/web/2019/10/22/Front-end-Must-Know-ES6.html">ES6 複習彙整[上]</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>ES6 ECMAScript 6 (ES6): ECMAScript第6版，2015年發布 重點新語法如下: 變數宣告 let, const (block scope) const常數，不能變動其記憶體位置 指向的內容是可以變動的 let在宣告前不能使用 let,const 作用域在{}中 Template Literals 可將變數放入 ${} // ES5寫法 var name = 'Your name is ' + first + ' ' + last + '.' var url = 'http://localhost:3000/api/messages/' + id // ES6寫法 var name = `Your...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 22, 2019</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/web">Web</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/studygroup/2019/10/17/Linux-Basic-command.html">Linux基本指令[上]</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>10/17讀書會筆記 主講人:帆哥 Linux基本指令 指令構成 command [-options] param1 param2 -簡寫 –全名 -y =–year (可能有例外) option and param用空格區分隔 太長的指令 用\跳脫enter字元 ex: ls +enter ex: ls \  »不會執行 等待繼續輸入 反斜線指跳脫下一個字元 ls \enter 和 ls \ enter 有區分大小寫 cd CD不同!! 常用指令-檔案和目錄管理 ls:List ls ls -al ls -al ~ 波浪符號代表home的位置 ls -a -l ~ 列出當前目錄的東西...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 17, 2019</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/studygroup">Studygroup</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  
-</ul>
-
-<nav class="pagination" role="navigation">
-	<p>
-    
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
+	<div
+		class="site-header-container has-cover"
+		style="background-image: url(/assets/cover.jpg);"
 		
-		<span class="page-number">Page 1 of 5</span>
-		
-		<a class="newer-posts" href="/page/2/">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-		
-	</p>
-</nav>
+	>
+		<div class="scrim has-cover">
+			<header class="site-header">
+				<h1 class="title">Yu-Shan | 菜鳥筆記</h1>
+				<p class="subtitle">當才華撐不起野心時，就該好好靜下心來學習</p>
+			</header>
+		</div>
+	</div>
 
-</div>
+	<div class="wrapper">
+		<ul class="post-list">
+			
+			<li>
+				<h2>
+					<a
+						class="post-link"
+						href="/studygroup/2019/11/13/Building-Test.html"
+					>Refactoring Ch.4-Building Test</a>
+				</h2>
+				<section
+					class="post-excerpt"
+					itemprop="description"
+				>
+					<p>關於重構ch.4-建構測試程式 為了正確的進行重構，需要一套可靠的測試工具來發現難以避免的錯誤 這篇筆記一併介紹測試種類，以及利用Jest&amp;Peppeteer實作 Building Test-建構測試程式 章節分成七個部分: The value of Self-Testing...</p>
+				</section>
+				<section class="post-meta">
+					<div class="post-date">November 13, 2019</div>
+					<div class="post-categories">
+						in 
+						
+						<a href="/category/studygroup">Studygroup</a>
+						
+						
+					</div>
+				</section>
+			</li>
+			
+			<hr>
+			
+			
+			<li>
+				<h2>
+					<a
+						class="post-link"
+						href="/studygroup/2019/11/07/Linux-Basic-command-II.html"
+					>Linux基本指令[中][I/O Redirection]</a>
+				</h2>
+				<section
+					class="post-excerpt"
+					itemprop="description"
+				>
+					<p>11/7讀書會筆記 主講人:帆哥 Review echo取用變數 利用echo讀出變數的內容，且變數在取用時，必須加上$符號。 echo $PATH　或是 echo ${PATH} PATH為執行檔的搜尋路徑，目錄之間會以冒號分隔...</p>
+				</section>
+				<section class="post-meta">
+					<div class="post-date">November 7, 2019</div>
+					<div class="post-categories">
+						in 
+						
+						<a href="/category/studygroup">Studygroup</a>
+						
+						
+					</div>
+				</section>
+			</li>
+			
+			<hr>
+			
+			
+			<li>
+				<h2>
+					<a
+						class="post-link"
+						href="/web/2019/11/04/WebSocket-excercise-Interview-Task.html"
+					>Websocket 小實作</a>
+				</h2>
+				<section
+					class="post-excerpt"
+					itemprop="description"
+				>
+					<p>起源於interview某家公司出的小作業 實作一個桌機與手機互動的小demo 紀錄其中的過程 起源 公司提供了一個參考影片，影片中的桌機畫面是一個web動畫，以及一個行走中的小角色 影片中的人拿著手機，以橫向翻轉手機時，桌機動畫裡的場景會改變，ex:白天-黑夜 可能也會改變動畫故事的發展 發想 首先survey了手機內含的感測器，主要常見的像是 近距感測器(Proximity...</p>
+				</section>
+				<section class="post-meta">
+					<div class="post-date">November 4, 2019</div>
+					<div class="post-categories">
+						in 
+						
+						<a href="/category/web">Web</a>
+						
+						
+					</div>
+				</section>
+			</li>
+			
+			<hr>
+			
+			
+			<li>
+				<h2>
+					<a
+						class="post-link"
+						href="/studygroup/2019/10/31/Learning-how-to-learn-beginner.html"
+					>Learning how to learn & Conf統整</a>
+				</h2>
+				<section
+					class="post-excerpt"
+					itemprop="description"
+				>
+					<p>10/31 讀書會筆記 來自上周10/24 昱廷分享 coursera的課程 一起看完week1 video的部分 以及分享大大小小的conf Learning how...</p>
+				</section>
+				<section class="post-meta">
+					<div class="post-date">October 31, 2019</div>
+					<div class="post-categories">
+						in 
+						
+						<a href="/category/studygroup">Studygroup</a>
+						
+						
+					</div>
+				</section>
+			</li>
+			
+			<hr>
+			
+			
+			<li>
+				<h2>
+					<a
+						class="post-link"
+						href="/web/2019/10/22/Front-end-Must-Know-ES6.html"
+					>ES6 複習彙整[上]</a>
+				</h2>
+				<section
+					class="post-excerpt"
+					itemprop="description"
+				>
+					<p>ES6 ECMAScript 6 (ES6): ECMAScript第6版，2015年發布 重點新語法如下: 變數宣告 let, const (block...</p>
+				</section>
+				<section class="post-meta">
+					<div class="post-date">October 22, 2019</div>
+					<div class="post-categories">
+						in 
+						
+						<a href="/category/web">Web</a>
+						
+						
+					</div>
+				</section>
+			</li>
+			
+			
+		</ul>
+
+		<nav
+			class="pagination"
+			role="navigation"
+		>
+			<p>
+				
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				<span class="page-number">Page 1 of 5</span>
+				
+				<a
+					class="newer-posts"
+					href="/page/2/"
+				>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+				
+			</p>
+		</nav>
+
+	</div>
 </div>
 
     </div>
