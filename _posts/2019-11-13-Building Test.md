@@ -41,11 +41,11 @@ tags: refactoring testing
 
 One of the most widely used techniques for code refactoring is the red/green process used in Agile test-driven development. Applying the Red-Green-Refactor method, developers break  refactoring down into three distinct steps:
 
-1. think about what you want to develop. [RED]
+1. think about **what** you want to develop. [RED]
 
-2. think about how to make your tests pass. [GREEN]
+2. think about **how** to make your tests pass. [GREEN]
 
-3. think about how to improve your existing implentation. [REFACTOR]
+3. think about **how** to improve your existing implentation. [REFACTOR]
 
    ![Red-Green Refactor](https://imgur.com/6bEezko.jpg)
 
@@ -54,6 +54,8 @@ One of the most widely used techniques for code refactoring is the red/green pro
 ## Sample Code to Test
 
 >  利用Academind的影片的測試範例
+
+[範例下載網址](https://github.com/academind/js-testing-introduction/tree/starting-setup)
 
 輸入Name&Age，點擊Add User會出現{}
 
@@ -81,7 +83,7 @@ One of the most widely used techniques for code refactoring is the red/green pro
   - also need to be able to define your **expect** actions and ckeck them.
   - e.g. Chai
   - [**Jest**](https://jestjs.io/) is test runner+assertion library combined.
-- e2e-testing tools
+- Headless browser (e2e-testing tools)
   - simulation browser interaction
   - e.g. Selenium/ Puppeteer
 
@@ -127,6 +129,10 @@ One of the most widely used techniques for code refactoring is the red/green pro
   
   //定義test function
   //傳入兩個參數:	1.測試的描述	2.一個包含測試邏輯的匿名函式
+  //test('name', () => {
+      // jest will execute to re-run
+      //testing code
+  //})
   test('should output name and age', () => {
     const text = generateText('Max', 29)
     expect(text).toBe('Max (29 years old)')
@@ -172,6 +178,7 @@ test('should output data-less text', () => {
     const text = generateText('', null);
     expect(text).toBe(' ( years old)')
 })
+// fail!!!
 ```
 
 ---
@@ -182,6 +189,10 @@ test('should output data-less text', () => {
 
 - npm install --save-dev puppeteer
 
+- [Puppeteer官網](https://pptr.dev/),[Puppeteer github](https://github.com/GoogleChrome/puppeteer)
+
+  
+  
   ```javascript
   const puppeteer = require('puppeteer')
   
@@ -189,7 +200,9 @@ test('should output data-less text', () => {
   // browser物件:	newPage()開啟新頁面 ;goto()導向URL	;click()頁面點擊互動
   test('should create an element with text and correct class', async () => {
     const browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
+      slowMo:80,// slow down by 80ms
+      args:['--window-size=1920,1080']
     })
     // await 確保一個promise物件都resolve/reject才會繼續執行
     const page = await browser.newPage();
@@ -204,7 +217,9 @@ test('should output data-less text', () => {
   }, 10000)
   ```
 
- # 所以關於*測試*這件事
+
+
+# 所以關於測試這件事
 
 > 內容取自[JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
 
@@ -229,7 +244,7 @@ test('should output data-less text', () => {
 - break up complex dependencies
 - improve your code
 
-## Different kinds of tests
+## Different kinds of tests(自動化測試)
 
 | **Fully Isolated <br />(ex:testing one function)**           |      **Unit Tests**       | **write thousands of these!**     |
 | ------------------------------------------------------------ | :-----------------------: | --------------------------------- |
@@ -243,9 +258,14 @@ test('should output data-less text', () => {
   測試框架: mocha, jasmine,ava,tap
 
 - 整合測試(Integration Testing)
+
 - 端對端測試(End-to-end Testing)
 
+![自動測試金字塔](https://imgur.com/sN0JVew.jpg)
 
+
+
+[圖片來源: Academind]
 
 ## Other types about Testing 
 
