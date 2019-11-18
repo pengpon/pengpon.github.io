@@ -4,7 +4,7 @@ title:  "Websocket 小實作"
 date:   2019-11-04 16:16:00 +0800
 author: Pon
 categories: web
-tags: interview 
+tags: interview 　websocket
 ---
 > 起源於interview某家公司出的小作業
 >
@@ -299,9 +299,85 @@ ws.onmessage = event => {
 
 只要有一個client觸發了shake, 所有client的modal就會被開啟
 
-要再進一步調整server的寫法
+<br>
 
-以上!
+## 11/11更新
+
+如同第一次的demo結果有幾點要改善
+
+- server要可以對到多組client，每組獨立
+
+- 桌機/筆電 和手機裝置是一組
+
+  構想是:
+
+  1. client端(c1)由browser進入首頁連結
+  2. c1向server進行websocket連線，sever端檢查url是否帶有token，若無產生一亂數作為token
+  3. sever傳回一物件{group:token}給c1  (ex:token=abc)
+  4. c1接收傳回的token值，組合url產生QRcode (ex: url?token=abc)
+  5. 手機裝置掃描QRcode，亦跟server進行websocket連線，成為c2
+  6. server檢查url，回傳c2原有的token (token=abc)
+  7. 故c1和c2的token皆為abc
+  8. client端監聽deviceorientation，加速度值達標時，觸發事件，向server傳送client訊息(要包含token資訊)
+  9. server向所有client推送{shake:token} (ex:shake:abc)
+  10. client端比對server傳來的token是否與自己帶有的token相等
+
+```javascript
+// server.js
+	//URL是否帶有token
+    let token = request.url.split("?token=g")[1];
+    var number = (getRandom(connectLimit));
+	// 取隨機數
+    function getRandom(limit) {
+        return Math.floor(Math.random() * connectLimit) + 1;
+    }
+
+  if (token) {
+        ws.send(JSON.stringify({
+            group: token
+        }));
+    } else {
+        ws.send(JSON.stringify({
+            group: number
+        }));
+    }
+```
+
+```javascript
+// client.js
+   ws.onmessage = event => {
+		eventObj = JSON.parse(event.data);
+
+		//監聽server傳來的group token值
+		if (Object.keys(eventObj).indexOf('group') !== -1) {
+			this.token = eventObj.group;
+		}
+		// 更換qrcode url
+		document.getElementById('qrcode-url').src ="http://www.funcode-tech.com/Encoder_Service/img.aspxcustid=1&username=&public&codetype=QR&EClevel=0&data=https://pengpon.github.io/vpon_task?token=g" +this.token
+		// 監聽server傳來的shake目標
+		if (Object.keys(eventObj).indexOf('shake') !== (-1) && eventObj.shake == this.token) {
+		// receive the "shake", show the fortunepaper result
+		let modal = document.getElementById("open-modal");
+		modal.setAttribute('style', "visibility:visible;opacity:1;pointer-events: auto;");
+		}
+	}
+```
+
+因為多加了掃描QRcode的流程，畫面異動如下
+
+![update-index](https://imgur.com/mzeHzYy.jpg)
+
+![scan](https://imgur.com/ZJBODvM.jpg)
+
+# 檢討
+
+其實還有很多細節或是畫面需要做：
+
+- 如果同一組token有2個以上的client連線時，該顯示什麼訊息給使用者
+- 當與server連線失敗時，該怎麼提醒使用者
+- 若一開始使用者是用手機裝置進入首頁(僅有shake字樣)，該怎麼提醒　(使用者非照預設的情境走-先用桌機/筆電開啟 再掃QRcode)
+
+再度很感恩有這次玩websocket的經驗！！！
 
 # 延伸閱讀&參考圖文+code
 

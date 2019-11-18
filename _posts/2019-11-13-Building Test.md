@@ -85,7 +85,7 @@ One of the most widely used techniques for code refactoring is the red/green pro
   - [**Jest**](https://jestjs.io/) is test runner+assertion library combined.
 - Headless browser (e2e-testing tools)
   - simulation browser interaction
-  - e.g. Selenium/ Puppeteer
+  - e.g. Selenium/ [**Puppeteer**](https://developers.google.com/web/tools/puppeteer)
 
 #### Jest
 
@@ -99,7 +99,7 @@ One of the most widely used techniques for code refactoring is the red/green pro
     //package.json
     
     "scripts":{
-        "test":test
+        "test":"jest"
         // "test":"jest --watch"	自動re-run   
     }
     ```
@@ -191,6 +191,8 @@ test('should output data-less text', () => {
 
 - [Puppeteer官網](https://pptr.dev/),[Puppeteer github](https://github.com/GoogleChrome/puppeteer)
 
+- 將每個步驟逐行輸入(開啟browser、開啟新頁面、導向至url、點擊輸入框、type something)
+
   
   
   ```javascript
@@ -269,7 +271,7 @@ test('should output data-less text', () => {
 
 ## Other types about Testing 
 
-<img src="https://imgur.com/J8riL7r.jpg" alt="different types of testing" style="zoom: 50%;" />
+<img src="https://imgur.com/J8riL7r.jpg" alt="different types of testing" style="zoom: 200%;" />
 
 ​								圖片來源:https://www.softwaretestinghelp.com/
 
