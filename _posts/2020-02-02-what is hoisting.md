@@ -44,9 +44,30 @@ tags: web
 ```javascript
 console.log('name is', name);
 var name;
-console.og('name is', name);
+console.log('name is', name);
 name='peng';
 console.log('name is', name);
+```
+
+```javascript
+// 1.
+console.log(a);
+// 沒有宣告a變數 就要取值....找不到
+// ReferenceError: a is not defined
+
+// 2. 
+console.log(b);
+var b=1;
+// undefined
+// 逐行執行 why why why
+// Hoisting造成!!
+
+// 3. 好似code被搬移
+var b;
+console.log(b);
+b=1;
+// 變數的宣告被提升 賦值不會!
+
 ```
 
 
@@ -82,9 +103,9 @@ Javascript 引擎負責轉譯我們的source code,並執行轉譯後的結果
 
 <br>
 
+# 基本概念
 
-
-## Syntax parser-語法解析器
+## 1.Syntax parser-語法解析器
 
 > *A Program that reads your code and determines what it does and if its grammar is valid.*
 >
@@ -96,15 +117,17 @@ Javascript 引擎負責轉譯我們的source code,並執行轉譯後的結果
 
 ![syntax parser](https://imgur.com/Tz1ZkD8.jpg)
 
-## Execution context-執行環境
+## 2.Execution context-執行環境
 
 > *A wrapper to help  manage the code that is running.*
 >
-> 管理正在執行的程式
+> 幫助管理正在執行的程式
+>
+> 想像很多個lexical environment, 決定現在該執行哪個
 
 
 
-## Lexical environment-詞彙環境
+## 3.Lexical environment-詞彙環境
 
 > *Where something sits physically in the code you write.*
 >
@@ -118,17 +141,28 @@ Javascript 引擎負責轉譯我們的source code,並執行轉譯後的結果
 
 根據詞彙環境幫助我們想像變數/函數在電腦記憶體的位置!!
 
+```javascript
+function hello(){
+    var a ="hello";
+}
+//不同於
+var a="hello";
+function hello(){
+    
+}
+```
+
+
+
 
 
 # Global execution context-全域執行環境
 
 *the javascript engine creates the global execution context before it starts to execute any code.*
 
+**可以在任何地方取用**
 
-
-**可以在任何地方取用他**
-
-初始化時，創造global object以及變數this
+初始化時，會創造global object以及變數this (*不需程式碼 就被創造*)
 
 執行javascript時，永遠會有一個全域物件
 
@@ -138,7 +172,13 @@ Javascript 引擎負責轉譯我們的source code,並執行轉譯後的結果
 
 如果變數和物件不在函數中，就是全域物件~
 
+![global execution](https://imgur.com/7FFWGMl.jpg)
 
+ex:即使執行一個空的js file-->browser中JS engine解析js file-->執行環境被建立-->global object(window)和this被建立
+
+**還有第三個建立的東西 outer environment.... **
+
+<br>
 
 # 所以執行環境???
 
@@ -151,7 +191,8 @@ function b(){
 }
 b();
 console.log(a);
-
+// >called b
+// >hihihihi
 ```
 
 ```javascript
@@ -163,8 +204,8 @@ function b(){
 }
 // 某些程式會報錯>>> 未宣告就要用b
 // output
-// called b
-// undefined
+// >called b
+// >undefined
 ```
 
 網路解釋: javascript的變數和函數被提升到程式碼最上面
@@ -175,7 +216,7 @@ function b(){
 
 ## 執行環境運作
 
-執行環境被創造有兩階段
+**執行環境被分兩階段建立**
 
 - creation phase
 
@@ -185,9 +226,61 @@ function b(){
 
   這個步驟稱為**hoisting**
 
-  逐行執行前 替變數在記憶體中建立一個空間
+  逐行執行前 替變數&函數在記憶體中建立一個空間
 
-  當程式被逐行執行時, 才可以找到這些變數
+  當程式被逐行執行時, 才可以找到這些變數或函數
+
+  ```javascript
+  // 函數也會被hoisting
+  // 建立函數常用兩種方式 Function declarations/ Function expressions
+  funciton abc (){
+       // bla bla
+   }
+  
+  var a =function (){
+      // bla bla
+  }
+  // 匿名函數當作值 指定給變數
+  
+  
+  // 如果hoisting不存在
+  abc();
+  function abc(){
+      //blablabla
+  }
+  // 就不能用
+  
+  // Function expressions
+  // 僅有var a 被hoisting
+  
+  ```
+
+  **加映**
+
+  宣告變數&函數的順位
+
+  >Variable assignment takes precedence over function declaration.
+  >
+  >Function declarations take precedence over variable declarations.
+
+  變數的賦值>函數的宣告>變數的宣告
+
+  ```javascript
+  function name(){
+  console.log('called name');
+  } 
+  var name;
+  console.log(name);
+  
+  //
+  function name(){
+  console.log('called name');
+  } 
+  var name=2;
+  console.log(name);
+  ```
+
+  
 
 - execution phase
 
@@ -209,13 +302,41 @@ console.log(a);
 // 找出a的值 並印出
 ```
 
+<br>
+
 # 單執行緒&同步執行
 
 javascript不是瀏覽器唯一的東西
 
 javascript為單執行緒不是指瀏覽器, 
 
-同步:程式碼會依照出現順序一次執行一行
+單執行緒(single threaded): one command at a time
+
+同步(synchronous): one at a time 程式碼會依照出現順序一次執行一行
+
+```javascript
+////同步
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+output:// 1 2 3 4 5
+
+////非同步
+function asyncConsole(time,value){
+setTimeout(function(){console.log(value);},time);
+}
+asyncConsole(200,1);
+asyncConsole(100,2);
+asyncConsole(400,3);
+asyncConsole(500,4);
+asyncConsole(300,5);
+output:// 2 1 5 3 4
+////
+```
+
+
 
 <br>
 
@@ -232,11 +353,15 @@ a();
 
 ```
 
-一個新的執行環境創造-->被放進stack中
+呼叫function-->一個新的執行環境創造-->被放進stack中
 
 誰在最上面就是就是正在執行的東西
 
 會有自己的記憶體空間給變數和函數
+
+**補充 event loop**
+
+![event loop](https://imgur.com/1gN15pj.jpg)
 
 <br>
 
@@ -250,11 +375,11 @@ function b(){
     console.log(myvar);
 }
 function a(){
-    var mywar=2; // 創造myvar在自己的變數環境中
+    var myvar=2; // 創造myvar在自己的變數環境中
     console.log(myvar);
     b(); // 呼叫函數 創造出他的執行環境
 }
-var mywar=1;
+var myvar=1;
 console.log(myvar);
 a();
 console.log(myvar);
@@ -332,6 +457,42 @@ test();
 // 逐行執行 回傳2
 
 ```
+
+```javascript
+// event loop
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+
+// hoisting
+var salary = "1000$";
+
+ (function () {
+     console.log("Original salary was " + salary);
+
+     var salary = "5000$";
+
+     console.log("My New Salary " + salary);
+})();
+// hoisting
+function foo(){    
+    function bar() {        
+        return 3;    
+    }    
+    return bar();    
+    function bar() {        
+        return 8;    
+    }
+}
+alert(foo());
+
+
+```
+
+
 
 <br>
 
@@ -461,6 +622,8 @@ test();
 
 # 延伸閱讀&參考圖文
 
+Udemy-課程-克服JS的奇怪地方
+
 [我知道你懂 hoisting，可是你了解到多深?](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 
 [The JavaScript runtime environment](http://dolszewski.com/javascript/javascript-runtime-environment/)
@@ -471,3 +634,4 @@ test();
 
 [The History of Web Browsers-1994~2011演化圖](http://www.testking.com/techking/infographics/browser-evolution-the-history-of-web-browsers-infographic/)
 
+[Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
