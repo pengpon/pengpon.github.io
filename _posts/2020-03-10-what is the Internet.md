@@ -79,6 +79,24 @@ Information that travels over the internet does so via a variety of languages kn
 
 
 
+補充:
+
+類比 V.S. 數位訊號
+
+- 類比訊號:
+
+  大自然裡一切的訊號，包括我們聽到的聲音、看到的影像，都屬於類比訊號。得到一個連續的電壓變化，這種「連續的訊號」稱為類比訊號。
+
+- 數位訊號:
+
+  經由加工以後可以將連續的類比訊號變成 0 與 1 兩種不連續的訊號，例如：電腦在運算的時候只有低電壓（0V 代表二進位的數字 0）與高電壓（1V 代表二進位的數字 1），訊號可以由 0（0V）直接跳到 1（1V），也可以由 1（1V）直接跳到 0（0V），得到一個不連續的電壓變化。
+
+訊號數位化:
+
+​		類比訊號數位化以後都只剩下 0 與 1 兩種數位訊號。在使用數位訊號的時候，「0 與 1 的排列順序」可能代表一個文字、一段聲音或一張圖片。
+
+![訊號數位化](https://imgur.com/6IxxWIU.jpg)
+
 
 
 ## 靠怎麼傳送訊息??
@@ -89,13 +107,23 @@ Information that travels over the internet does so via a variety of languages kn
 
 #### 補充:
 
-頻寬(Bandwidth)-傳輸裝置最大的傳輸資料量(bitrate)，單位時間內可以傳送的二進位數據量,通常以秒為單位(bit per second, bps)
+頻寬(Bandwidth)-可以傳遞訊號的頻率範圍/ 訊號佔據的頻帶寬度
+
+For 類比訊號: 頻寬以Hz為單位 EX:3100Hz~3500Hz
+
+For 數位訊號: 頻寬指傳輸裝置最大的傳輸資料量(bitrate)，單位時間內可以傳送的二進位數據量,通常以秒為單位(bit per second, bps)
 
 另一個測量速度單位是延遲時間(latecncy),傳送一位元所花的時間
 
 舉例:
 
 下載一首3MB的歌花3秒鐘，或是8Mbps，每秒鐘可以傳送800萬個位元資料!
+
+
+
+3G, 4G, 5G (G-Generation)
+
+![演進史](https://imgur.com/kQUmow0.jpg)
 
 
 
@@ -113,7 +141,7 @@ Information that travels over the internet does so via a variety of languages kn
 
    根據角度不同, 可以同時傳送多組訊號, 所有訊號都以光速(~300,000,000 m/s)前進
 
-   光纖速度快,訊號衰減的很低，所以把光纖電纜裝在海底,連結海洋的兩地(但也很貴....)
+   光纖速度快,訊號衰減的很低，所以把光纖電纜裝在海底,連結海洋的兩地(但也很貴....) [海底電纜傳送門](https://www.storm.mg/article/1524745)
 
    <img src="https://imgur.com/zTG5PGd.jpg" alt="fiber" style="zoom:50%;" />
 
@@ -267,6 +295,8 @@ AND運算結果相同，代表兩台主機同網段
 
 
 
+
+
 # 延伸閱讀&參考圖文
 
 [what is the Internet?](https://www.youtube.com/watch?v=Dxcc6ycZ73M)-youtube-video
@@ -282,3 +312,5 @@ AND運算結果相同，代表兩台主機同網段
 [二進位運作](https://www.ted.com/talks/jose_americano_n_l_f_de_freitas_how_exactly_does_binary_code_work/transcript?language=zh-tw#t-165461)-video
 
 [What is OSI Model?](https://www.youtube.com/watch?v=Ilk7UXzV_Qc)
+
+[擁有它就進入深海資訊天堂！](https://www.storm.mg/article/1524745)
