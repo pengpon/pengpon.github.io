@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "心靈雞湯 & 人生哲學 複習一下 Part 1"
+title:  "心靈雞湯 & 人生哲學 複習一下"
 date:   2019-10-04 05:17:00 +0800
 author: Pon
 categories: studygroup
