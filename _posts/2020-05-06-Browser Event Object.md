@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Event Bubble發生機制"
+title:  "淺談Event傳播機制"
 date:   2020-05-06 00:11:00 +0800
 author: Pon
 categories: studygroup 
@@ -211,11 +211,9 @@ event中有個屬性eventPhase，表示此事件是在哪一個是Phase被觸發
 
 <br>
 
-`addEventListener(event, handler, useCature)`的第三個參數，代表是否要把listener放到BUBBLING_PHASE
+`addEventListener(event, handler, useCature)`的第三個參數，代表是否要把listener放到CAPTURING_PHASE，預設為false!
 
-預設為false!
-
-所以當點擊最內層的元素時,會從目標依序往上一一觸發!
+所以預設行為是　當點擊最內層的元素時,會從目標依序往上一一觸發!
 
 
 
@@ -231,11 +229,11 @@ event中有個屬性eventPhase，表示此事件是在哪一個是Phase被觸發
 <br>
 ## Capturing 
 
-當內部被觸發時 從最外圍的handler執行，再執行本身
+當內部(target)被觸發時 從最外圍的handler執行，再執行本身
 
 <br>
 
-p.s. 當事件傳遞到目標對象時，無論第三個參數為何 event phase都為at_target
+p.s. 當事件傳遞到目標對象時，無論第三個參數為何，**event phase都為at_target**
 
 既然已經是目標就不會再分capturing / bubbling，handler照程式碼執行的順序
 
@@ -266,8 +264,16 @@ p.s. 當事件傳遞到目標對象時，無論第三個參數為何 event phase
 
 常用Event物件方法:
 
-- preventDefault() 取消事件的預設行為
+- preventDefault() 取消事件的預設行為，ex:取消超連結的跳轉頁面行為
 - stopPropagation() 停止事件的傳播行為
+
+<br>
+
+p.s. preventDefault()也會隨著事件傳遞下去
+
+ex: click TargetA 執行`e.preventDefault()`-->click事件接著傳給 Element B，同時也會取消B的預設行為
+
+
 
 <br>
 
@@ -275,7 +281,7 @@ p.s. 當事件傳遞到目標對象時，無論第三個參數為何 event phase
 
 *內容取自[從ES6開始的JavaScript學習生活](https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/event.html)*
 
-​可以接收事件/讓監聽者註冊，Ex: DOM元素、window、document
+可以接收事件/讓監聽者註冊，Ex: DOM元素、window、document
 
 有三個方法可以使用:
 
