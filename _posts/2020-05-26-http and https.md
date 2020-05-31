@@ -23,19 +23,13 @@ P.S. 協議是client 和server雙方要使用的，不是各訂各的
 
 遵守約定好的協議，讓我們(client)可以和網站(server)溝通
 
-<br>
-
 ![OSI和TCP/IP協定](https://imgur.com/NH53o7z.jpg)
 
 圖取自鳥哥
 
-<br>
-
 ![TCP/IP Protocol](https://imgur.com/MdyKyuT.jpg)
 
 圖片取自[Introduction to internetworking](https://wiki.mikrotik.com/wiki/Testwiki/Introduction_to_internetworking)
-
----
 
 
 
@@ -63,8 +57,6 @@ client端在TCP handshake後，送出request給HTTP server，server 回應資訊
 
 <br>
 
----
-
 
 
 ## HTTP演化
@@ -88,10 +80,6 @@ client端在TCP handshake後，送出request給HTTP server，server 回應資訊
 
 
 <br>
-
----
-
-
 
 ## 現今HTTP
 
@@ -117,8 +105,6 @@ client端在TCP handshake後，送出request給HTTP server，server 回應資訊
 
 <br>
 
----
-
 
 
 # HTTPS
@@ -135,13 +121,13 @@ HTTPS也是利用TCP協議去傳送和接收封包，資料需經過加密和解
 
 圖片取自[researchgate](https://www.researchgate.net/figure/The-Hypertext-Transfer-Protocol-HTTP-and-Hypertext-Transfer-Protocol-Secure-HTTPS_fig1_320479973)
 
-<br>
+
 
 HTTPS實際上是由Netscape(網景)在1994在自家的瀏覽器所用
 
 起初是使用SSL協議，最終才演化成使用TLS
 
-<br>
+
 
 ## 特點
 
@@ -152,8 +138,6 @@ HTTPS實際上是由Netscape(網景)在1994在自家的瀏覽器所用
 - 憑證 (證書)
 
   可確認網站的真實性，查看網站的憑證內容
-
----
 
 
 
@@ -181,7 +165,7 @@ HTTPS實際上是由Netscape(網景)在1994在自家的瀏覽器所用
 
 圖取自:[那些關於ssl-tls的二三事]([https://medium.com/@clu1022/%E9%82%A3%E4%BA%9B%E9%97%9C%E6%96%BCssl-tls%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B-%E4%BA%8C-how-ssl-works-a9d6720bdd48](https://medium.com/@clu1022/那些關於ssl-tls的二三事-二-how-ssl-works-a9d6720bdd48))
 
-<br>
+
 
 瀏覽器 what to do?
 
@@ -197,8 +181,6 @@ Server what to do?
 
 - 這個憑證可以用在不同的協議上像是HTTP(web), SMTP(email), FTP
 
----
-
 
 
 數據傳輸階段:**對稱加密**(加解密用同一把)
@@ -213,19 +195,15 @@ Server what to do?
 
 推推:[How Does HTTPS Work? RSA Encryption Explained](https://tiptopsecurity.com/how-does-https-work-rsa-encryption-explained/)
 
----
-
 
 
 ## 加密演算法
 
 - 對稱加密:只有一個私鑰，AES、RC4、3DES
 - 非對稱加密:公私鑰各一，RSA、DSA/DSS
-- HASH演算:MD5、SHA1、SHA256
+- ~~HASH演算:MD5、SHA1、SHA256~~
 
-*老高名言:這個內容有機會以後再做介紹(?!)*
-
----
+*老高名言:這個內容有機會以後再做筆記介紹(?!)*
 
 
 
@@ -251,7 +229,7 @@ Server what to do?
 
 p.s. [Let's Encrypt](https://letsencrypt.org/zh-tw/)，有免費SSL/TLS憑證服務，三個月簽發一次 
 
----
+
 
 ### 2. 設定Web Server
 
@@ -259,13 +237,13 @@ Apache, Nginx設定....
 
 懶人>>修改DNS，讓連線先經過cloudFlare伺服器，這段是加密的傳輸連線~
 
----
+
 
 ### 3. 替換HTTP網址成HTTPS
 
 存取資源的網址都要改成https://
 
----
+
 
 ### 4. 檢查
 
@@ -273,13 +251,11 @@ TLS/SSL憑證: [SSL Server Test](https://www.ssllabs.com/ssltest/)，輸入要�
 
 HTTP/2啟用: [HTTP/2 Test](https://tools.keycdn.com/http2-test)
 
-<br>
 
----
 
 # 補充
 
-## 1.HTTP/2
+## HTTP/2
 
 Google開發的網路傳輸協定**SPDY**(發音:speedy)，基於TCP的應用層協定，HTTP/2的前身
 
@@ -296,23 +272,19 @@ Google開發的網路傳輸協定**SPDY**(發音:speedy)，基於TCP的應用層
 
 推推[ALPHAcamp技術筆記](https://tw.alphacamp.co/blog/2016-07-12-http2)
 
-<br>
 
-## 2.封包攔截
 
-[Whireshark](https://www.wireshark.org/download.html)
+## 封包攔截
 
-<br>
+Whireshark:https://www.wireshark.org/download.html
 
----
 
-# 小結-比較
+
+# 比較
 
 ![http and https network protocol stacks](https://imgur.com/5nlMll9.jpg)
 
 圖取自[oreilly](https://www.oreilly.com/library/view/http-the-definitive/1565925092/ch04s01.html)
-
-<br>
 
 | HTTP                 | HTTPS             |
 | -------------------- | ----------------- |
@@ -324,7 +296,7 @@ Google開發的網路傳輸協定**SPDY**(發音:speedy)，基於TCP的應用層
 | no domain validation | domain validation |
 | no encryption        | data is encrypted |
 
-<br>
+
 
 # 延伸閱讀&參考圖文
 
