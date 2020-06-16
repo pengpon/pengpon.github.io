@@ -42,14 +42,14 @@ paginate: 5
 paginate_path: "/page/:num/"
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layout: 'archive'
-#   permalinks:
-#     category: '/category/:name/'
-#     tag: '/tag/:name/'
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
 
 # Disqus comments
 disqus_shortname: ponpeng
@@ -65,11 +65,18 @@ descriptions:
   - cat: web
     desc: "設計,UI/UX,前端技術"
 
-  - cat: studygroup
-    desc: "讀書會"
+  - cat: softskill
+    desc: "心靈雞湯"
 
   - cat: database
     desc: "資料庫"
+
+  - cat: linux
+    desc: "Linux"
+
+  - cat: docker
+    desc: "Docker"
+    
 
 
 # Social icons and sharing options

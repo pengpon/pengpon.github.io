@@ -3,7 +3,7 @@ layout: post
 title:  "Linux基本指令[上]"
 date:   2019-10-17 22:00:00 +0800
 author: Pon
-categories: studygroup
+categories: Linux
 tags: Linux
 ---
 

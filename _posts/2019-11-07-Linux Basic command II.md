@@ -3,7 +3,7 @@ layout: post
 title:  "Linux基本指令[中][I/O Redirection]"
 date:   2019-11-07 21:30:00 +0800
 author: Pon
-categories: studygroup
+categories: Linux
 tags: linux
 ---
 

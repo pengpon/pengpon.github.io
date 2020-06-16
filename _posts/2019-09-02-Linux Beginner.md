@@ -3,7 +3,7 @@ layout: post
 title:  "Linux Beginner"
 date:   2019-09-02 20:59:00
 author: Pon
-categories: studygroup
+categories: Linux
 tags: OS Linux
 ---
 # 前言
