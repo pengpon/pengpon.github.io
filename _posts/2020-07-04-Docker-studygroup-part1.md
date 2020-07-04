@@ -98,7 +98,7 @@ Server: Docker Engine - Community
   GitCommit:        fec3683
 ```
 
-data輸出方式也可以用json顯示`docker version --format '{{json .}}'`
+
 
 
 
