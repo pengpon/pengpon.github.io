@@ -5,7 +5,7 @@ url: "https://pengpon.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: Yu-Shan | 菜鳥日常筆記                                    # site's title
 description: "當才華撐不起野心時，就該好好靜下心來學習"      # used by search engines
-avatar: /assets/profile.jpg                         # Empty for no avatar in navbar
+avatar: /assets/profile.JPG                         # Empty for no avatar in navbar
 favicon: /assets/logo.png                             # Icon displayed in the tab
 
 # Header and footer text
