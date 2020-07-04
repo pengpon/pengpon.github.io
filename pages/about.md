@@ -5,7 +5,7 @@ permalink: /about/
 main_nav: true
 ---
 
-<!-- ![profile](https://imgur.com/t4ZbCHf.jpg "Profile Picture"){:.profile} -->
+
 
 2017年底初次踏入資訊產業當個菜鳥工程師，很幸運在團隊裡有前輩-[帆哥](https://josephjsf2.github.io/)時不時扮演大家的mentor，在對工作、技術能力灰心時(或是犯蠢時.....)，總是用積極的態度鼓勵菜鳥我，也常常分享好書、有趣技術還有種種過來人的經驗談。
 
