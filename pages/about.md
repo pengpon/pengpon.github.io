@@ -2,7 +2,8 @@
 layout: page
 title: About
 permalink: /about/
-main_nav: true
+feature-img: "assets/img/pexels/circuit.jpeg"
+tags: [About, Archive]
 ---
 
 2017年底初次踏入資訊產業當個菜鳥工程師，很幸運在團隊裡有前輩-[帆哥](https://josephjsf2.github.io/)時不時扮演大家的mentor，在對工作、技術能力灰心時(或是犯蠢時.....)，總是用積極的態度鼓勵菜鳥我，也常常分享好書、有趣技術還有種種過來人的經驗談。
@@ -17,6 +18,8 @@ main_nav: true
 
 
 這裡的筆記會包含工作上遇到的、讀書會、隨手點的小知識，基本上都是參考網路文章、圖片、影片，擷取出覺得是重點的重點，技術層面不高，但如果有誤解寫錯的地方，也希望大家不吝指正!!!! 
+
+
 
 
 
