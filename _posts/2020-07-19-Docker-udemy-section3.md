@@ -178,9 +178,9 @@ ex: docker container run
 
 `docker container run -p 80:80 --name webhost -d nginx`
 
-`docker container prot webhost`
+`docker container port webhost`
 
-`docker container inspect --format '{{.NetworkSettings.IPAddress }}' webhost`
+`docker container inspect --format '｛｛.NetworkSettings.IPAddress}}' webhost`
 
 `ifconfig en0`
 
