@@ -61,4 +61,18 @@
     <!-- seo tags -->
     {% seo %}
     <meta property="og:image" content="{{ '/' | absolute_url }}{% if page.thumbnail %}page.thumbnail{% else %}{{ page.feature-img | default: site.header_feature_image }}{% endif %} " />
-</head>
+	
+		<!-- adsense -->
+		<script data-ad-client="ca-pub-4248189377344868" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+		<!-- google gtag.js -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147222850-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147222850-1');
+</script>
+	</head>
