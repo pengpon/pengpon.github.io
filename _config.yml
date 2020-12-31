@@ -3,14 +3,14 @@ baseurl: ""
 url: "https://pengpon.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Yu-Shan | 菜鳥日常筆記                                    # site's title
-description: "當才華撐不起野心時，就該好好靜下心來學習"      # used by search engines
-avatar: /assets/profile.JPG                         # Empty for no avatar in navbar
-favicon: /assets/logo.png                             # Icon displayed in the tab
+title: Shan | 日常筆記                                # site's title
+description: "腦袋輸出區"         # used by search engines
+avatar:                                  # Empty for no avatar in navbar
+favicon: /assets/logo_2021.png                                   # Icon displayed in the tab
 
 # Header and footer text
 header_text: 才華撐不起野心時，就該靜下心來學習  # Change Blog header text
-header_feature_image: assets/img/pexels/triangular.jpeg
+header_feature_image: assets/img/pexels/cover_dark.png
 footer_text: >
   感謝 <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap的主題</a>
 
@@ -21,10 +21,10 @@ color_image: /assets/img/lineart.png                    # A bit transparent for 
 
 # Features
 katex: true                                             # Enable if using math markup
-google_analytics: "UA-147222850-1"                                      # Tracking ID, e.g. "UA-000000-01"
+google_analytics: "UA-147222850-1"                      # Tracking ID, e.g. "UA-000000-01"
 cookie_consent: false                                   # To respect the usage of cookies
 cookie_consent_disclaimer: We would like to use third party cookies and scripts to improve the functionality of this website.
-disqus_shortname:                                       # Your discus shortname for comments
+disqus_shortname: https-pengpon-github-io                                      # Your discus shortname for comments
 layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"
 footer_icons:                                           # In _data/social.yml
 share_buttons:                                          # In _data/social.yml

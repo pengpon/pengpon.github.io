@@ -1,6 +1,6 @@
-<div class="posts">
+<ul class="posts">
     {% for post in paginator.posts %}
-    <div class="post-teaser">
+    <li class="post-teaser">
         {% if post.thumbnail %}
         <div class="post-img">
             <a aria-label="{{ post.title }}" href="{{ post.url | relative_url }}">
@@ -10,25 +10,25 @@
         {% endif %}
         <span>
           <header>
-            <h1>
+            <h2>
               <a aria-label="{{ post.title }}" class="post-link" href="{{ post.url | relative_url }}">
                 {{ post.title }}
               </a>
-            </h1>
+            </h2>
             {% include post_info.html author=post.author date=post.date %}
           </header>
           {% if site.excerpt or site.theme_settings.excerpt %}
               <div class="excerpt">
                   {% if site.excerpt == "truncate" %}
-                     {{ post.content | strip_html | truncate: '250' | escape }}
+                     {{ post.content | strip_html | truncate: '100' | escape }}
                   {% else %}
                      {{ post.excerpt | strip_html | escape }}
                   {% endif %}
               </div>
           {% endif %}
       </span>
-    </div>
+    </li>
     {% endfor %}
-</div>
+</ul>
 
 {% include blog_nav.html %}

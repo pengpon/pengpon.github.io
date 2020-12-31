@@ -48,7 +48,8 @@ h6 {
 	margin: 0.67em 0;
 
 	a {
-		color: $text-color;
+		// color: $text-color;
+		color:inherit;
 	}
 
 }
@@ -58,7 +59,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.75em;
+	font-size: 2em;
 }
 
 h3 {
@@ -213,7 +214,7 @@ ul,
 dl,
 .math-display {
 	line-height: 1.5;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
 
 // KaTeX math display

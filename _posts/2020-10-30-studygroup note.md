@@ -5,13 +5,16 @@ date:   2020-10-30 09:35:00 +0800
 author: Pon
 categories: studygroup 
 tags: note
+author: peng
+excerpt_separator: <!--more-->
 ---
 
 
 
-## 接著是...
 
-docker暫時告一小段落，接著是之前票選(?)出來的**python入門**搭配[Udemy線上課程-The Python Mega Course: Build 10 Real World Applications](https://www.udemy.com/course/the-python-mega-course/)
+
+Docker暫時告一小段落，接著是之前票選(?)出來的**python入門**搭配[Udemy線上課程-The Python Mega Course: Build 10 Real World Applications](https://www.udemy.com/course/the-python-mega-course/)
+<!--more-->
 
 11/26開始
 
