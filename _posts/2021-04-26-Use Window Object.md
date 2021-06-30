@@ -2,12 +2,17 @@
 layout: post
 title:  "window 物件的點點滴滴"
 date:   2021-04-26 13:12:00 +0800
-author: Pon
-categories: web
-tags: web
+color: seagreen
+author: peng
+excerpt_separator: <!--more-->
+comments: true
 ---
 
 
+
+
+> 遇到坑才知道細節
+<!--more-->
 
 ## Window物件
 
