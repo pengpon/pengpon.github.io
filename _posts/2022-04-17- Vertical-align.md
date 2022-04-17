@@ -32,8 +32,7 @@ comments: true
 
 
 ![文字基準線](https://i.imgur.com/k7myQR0.png)
-
-> 圖取自 [Wiki](https://zh.wikipedia.org/wiki/%E9%99%8D%E9%83%A8)
+圖取自 [Wiki](https://zh.wikipedia.org/wiki/%E9%99%8D%E9%83%A8)
 
 
 
@@ -109,7 +108,7 @@ inline element 中只會有 data 或其他 inline element
 
 
 ### 範例
-<script async src="//jsfiddle.net/shanpeng33/hkyL6wn4/4/embed/html,result/"></script>
+<script async src="//jsfiddle.net/shanpeng33/hkyL6wn4/4/embed/html,css/"></script>
 
 ## 參考
 [vertical-align](https://css-tricks.com/almanac/properties/v/vertical-align/)
