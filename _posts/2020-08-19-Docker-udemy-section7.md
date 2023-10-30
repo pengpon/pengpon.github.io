@@ -4,7 +4,7 @@ title:  "[Docker]Udemy class:Docker Mastery Section 7 &讀書會紀錄"
 date:   2020-08-20 22:49:00 +0800
 author: Pon
 categories: docker 
-tags: Devops
+tags: devops
 ---
 
 > 筆記線上課程Docker Mastery Section 7內容及8/20+8/27讀書會內容
