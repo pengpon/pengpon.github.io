@@ -4,7 +4,7 @@ title:  "[Docker]讀書會Compose Part"
 date:   2020-10-21 17:45:00 +0800
 author: Pon
 categories: docker
-tags: Devops
+tags: devops
 ---
 
 > 10/15 winnie主講docker compose 筆記

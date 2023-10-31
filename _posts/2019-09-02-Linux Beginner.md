@@ -4,7 +4,7 @@ title:  "Linux Beginner"
 date:   2019-09-02 20:59:00
 author: Pon
 categories: Linux
-tags: OS Linux
+tags: OS
 ---
 # 前言
 
